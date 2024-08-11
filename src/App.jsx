@@ -1,17 +1,17 @@
 import React from "react";
-import Header from "./container/screen/header/Header";
-import Middle from "./container/middle/Middle";
-import QuoteSection from "./container/screen/testinomials/QuoteSection";
-import Footer from "./container/screen/footer/Footer";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Main from "./container/maincomponents/Main";
+import Oraytiqoralcares from "./routes/oraytiqoralcare/Oraytiqoralcares";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Middle />
-      <QuoteSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/oraytiqoralcare" element={<Oraytiqoralcares />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
